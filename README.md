@@ -2,20 +2,19 @@
 A simple wrapper for AWS SES in golang to send email
 
 
-<hr>
 ### Sending an email
 
 
+```` go
+package main
 
-    package main
-
-	import (
+import (
 	"fmt"
 
 	"github.com/srajelli/ses-go"
-	)
+)
 
-	func main() {
+func main() {
 	ses.SetConfiguration(aws_key_id, aws_secret_key, aws_region)
 	
 	emailData := ses.Email{
@@ -29,5 +28,5 @@ A simple wrapper for AWS SES in golang to send email
 	resp := ses.SendEmail(emailData)
 
 	fmt.Println(resp)
-	}
-
+}
+````
